@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark premium palette */
+    --bg-primary: #000000;
+    --bg-secondary: #050505;
+    --bg-tertiary: #0a0a0a;
+    --bg-card: #0f0f0f;
+    --bg-card-hover: #141414;
+    --text-primary: #f0f0f0;
+    --text-secondary: #888888;
+    --text-muted: #555555;
+    --text-inverse: #ffffff;
+    --accent-gold: #c9a84c;
+    --accent-gold-light: #e8d48b;
+    --accent-warm: #FF6B35;
+    --accent-cyan: #4A90D9;
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-medium: rgba(255, 255, 255, 0.1);
+    --glow-gold: rgba(201, 168, 76, 0.15);
+    --glow-warm: rgba(255, 107, 53, 0.1);
+
+    /* Day/Night cycle colors */
+    --day-color-sun: #FF6B35;
+    --day-color-glow: #FFD700;
+    --day-color-sky-top: #0B1D3A;
+    --day-color-sky-bottom: #2D5F8A;
+    --night-color-moon: #C0C0C0;
+    --night-color-glow: #4A90D9;
+    --night-color-sky-top: #020208;
+    --night-color-sky-bottom: #0B0C1A;
+
+    --font-display: 'Playfair Display', Times, serif;
+    --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --space-section: 12rem;
+    --space-element: 2rem;
+    --grid-pad: 4vw;
+
+    --background: 0 0% 0%;
+    --foreground: 0 0% 94%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 94%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 94%;
+    --primary: 43 45% 54%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 94%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 0 0% 8%;
+    --accent-foreground: 0 0% 94%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 43 45% 54%;
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    overflow-x: hidden;
+    cursor: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  a, button {
+    cursor: none;
+  }
+
+  ::selection {
+    background: var(--accent-gold);
+    color: #000000;
+  }
+
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-gold);
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold-light);
+  }
+}
+
+/* Gravity Scene Canvas */
+.gravity-canvas canvas {
+  display: block;
+}
+
+/* Exhibition hover item styles */
+.exhibition-item {
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exhibition-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  perspective: 1200px;
+  perspective-origin: -100% 50%;
+  position: relative;
+}
+
+.char {
+  display: inline-block;
+  will-change: transform;
+  transform-origin: 0% 0%;
+}
+
+/* Day/Night transition for sections */
+.daynight-section {
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+  z-index: 9999;
+  transform-origin: left;
+  will-change: transform;
+}
+
+.scroll-progress.night {
+  background: linear-gradient(90deg, var(--night-color-glow), var(--night-color-moon));
+}
+
+/* Global smooth transitions */
+section, footer, div {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Pulse animation for scroll indicator */
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.2); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Glowing border animation for cards */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(201, 168, 76, 0.1); }
+  50% { border-color: rgba(201, 168, 76, 0.3); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    cursor: auto;
+  }
+  
+  a, button {
+    cursor: auto;
+  }
+}
+
+/* Mobile cursor fix */
+@media (pointer: coarse) {
+  body, a, button {
+    cursor: auto !important;
+  }
+}
