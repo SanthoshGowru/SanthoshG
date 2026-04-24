@@ -15,55 +15,55 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title: 'Real-Time Pipeline Monitor',
-    subtitle: 'Streaming Data Infrastructure',
+    title: 'Azure Fabric Lakehouse Platform',
+    subtitle: 'Enterprise Data Architecture',
     description:
-      'Built an end-to-end real-time data pipeline monitoring platform using Apache Kafka and Spark Streaming. The system tracks throughput, latency, and partition health across 50+ Kafka topics, providing instant anomaly detection and alerting to prevent data loss and SLA breaches.',
+      'Built an end-to-end Microsoft Fabric Lakehouse platform at Elevance Health, ingesting 500K+ daily records via ADF pipelines. Designed Medallion Architecture (Bronze/Silver/Gold) on ADLS Gen2 and Azure Synapse, delivering self-service analytics to 150+ business users via Power BI dashboards with Dataflows Gen2.',
     image: '/images/project-pipeline.png',
-    techStack: ['Kafka', 'Spark Streaming', 'Python', 'Grafana', 'PostgreSQL'],
+    techStack: ['Microsoft Fabric', 'ADF', 'Azure Synapse', 'ADLS Gen2', 'Power BI'],
     metrics: [
-      { label: 'Topics Monitored', value: '50+' },
-      { label: 'Latency Reduced', value: '85%' },
-      { label: 'Uptime Achieved', value: '99.9%' },
+      { label: 'Daily Records', value: '500K+' },
+      { label: 'Data Availability', value: '+45%' },
+      { label: 'Business Users', value: '150+' },
     ],
   },
   {
-    title: 'Cloud Cost Analytics Platform',
-    subtitle: 'FinOps & Cost Optimization',
+    title: 'Real-Time Streaming Pipeline',
+    subtitle: 'Kafka & Azure Event Hubs',
     description:
-      'Designed a cloud cost intelligence platform that aggregates spend data from AWS and Snowflake, identifies optimization opportunities, and forecasts future costs using ML models. The platform drove a 40% reduction in monthly cloud spend by surfacing idle resources and recommending right-sizing strategies.',
+      'Designed and deployed real-time data ingestion pipelines using Apache Kafka and Azure Event Hubs for healthcare analytics at Elevance Health. Optimized PySpark batch jobs on Azure Databricks with Delta Lake, reducing execution time by 30% and cutting data latency from hours to minutes for live reporting.',
     image: '/images/project-cloud-cost.png',
-    techStack: ['AWS', 'Snowflake', 'dbt', 'Python', 'Tableau'],
+    techStack: ['Kafka', 'Event Hubs', 'Databricks', 'PySpark', 'Delta Lake'],
+    metrics: [
+      { label: 'Latency Cut', value: 'Hrs→Min' },
+      { label: 'Execution Time', value: '-30%' },
+      { label: 'SLA Compliance', value: '100%' },
+    ],
+  },
+  {
+    title: 'Snowflake Migration & FinOps',
+    subtitle: 'Cloud Cost Optimization',
+    description:
+      'Led enterprise Snowflake migration from on-premise systems and legacy Oracle/SQL Server databases. Implemented clustering keys, materialized views, and star schema design to reduce storage costs by 40% while increasing query performance. Automated 95% of transformation workflows using dbt with modular models and documentation.',
+    image: '/images/project-etl.png',
+    techStack: ['Snowflake', 'dbt', 'Terraform', 'Azure DevOps', 'Docker'],
     metrics: [
       { label: 'Cost Reduction', value: '40%' },
-      { label: 'Monthly Savings', value: '$85K' },
-      { label: 'Resources Optimized', value: '200+' },
+      { label: 'Automation Rate', value: '95%' },
+      { label: 'Deploy Errors', value: '-70%' },
     ],
   },
   {
-    title: 'ETL Performance Dashboard',
-    subtitle: 'Pipeline Orchestration & Analytics',
+    title: 'Data Governance & Compliance Hub',
+    subtitle: 'GDPR/CCPA Enterprise Compliance',
     description:
-      'Developed a comprehensive ETL performance tracking system using Apache Airflow and custom instrumentation. The dashboard provides real-time visibility into pipeline execution times, failure rates, data volumes processed, and DAG dependencies — enabling the team to proactively identify bottlenecks and optimize job scheduling.',
-    image: '/images/project-etl.png',
-    techStack: ['Airflow', 'AWS Glue', 'PySpark', 'Redshift', 'Docker'],
-    metrics: [
-      { label: 'Pipelines Tracked', value: '120+' },
-      { label: 'Processing Speed', value: '+50%' },
-      { label: 'Failure Rate', value: '<1%' },
-    ],
-  },
-  {
-    title: 'Data Quality Governance Hub',
-    subtitle: 'Enterprise Data Quality & Lineage',
-    description:
-      'Architected an enterprise data quality governance platform that enforces schema validation, tracks data lineage, and monitors quality scores across all data assets. Integrated with dbt tests and Great Expectations to automate quality checks across 500+ datasets, ensuring GDPR/CCPA compliance and data trustworthiness.',
+      'Architected a comprehensive data governance platform enforcing GDPR and CCPA compliance across all Azure data assets. Implemented PII masking, RBAC, and audit logging. Integrated Great Expectations for automated quality checks maintaining 99%+ accuracy across production datasets, with data lineage tracking and schema validation.',
     image: '/images/project-data-quality.png',
-    techStack: ['dbt', 'Great Expectations', 'Snowflake', 'Terraform', 'Python'],
+    techStack: ['Great Expectations', 'Azure ML', 'dbt', 'Python', 'ADLS Gen2'],
     metrics: [
-      { label: 'Datasets Governed', value: '500+' },
-      { label: 'Quality Score', value: '99.2%' },
+      { label: 'Data Accuracy', value: '99%+' },
       { label: 'Compliance', value: 'GDPR' },
+      { label: 'Datasets Governed', value: '500+' },
     ],
   },
 ];

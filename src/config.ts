@@ -69,29 +69,30 @@ export interface FooterConfig {
 
 export const siteConfig: SiteConfig = {
   language: "en",
-  siteTitle: "Santhosh Gowru | Data Engineer",
-  siteDescription: "Data Engineer with 4+ years experience architecting ETL pipelines, Spark processing, Kafka streaming, and cloud data infrastructure across AWS and Azure.",
+  siteTitle: "Santhosh Shetty | Senior Data Engineer",
+  siteDescription: "Senior Data Engineer with 5+ years building enterprise data pipelines across healthcare and technology sectors on Microsoft Azure, Fabric, Databricks, Snowflake, and Kafka.",
 }
 
 export const navigationConfig: NavigationConfig = {
-  brandName: "SG",
+  brandName: "SS",
   links: [
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
+    { label: "Certifications", href: "#education" },
     { label: "Contact", href: "#contact" },
   ],
 }
 
 export const heroConfig: HeroConfig = {
-  titleLines: ["SANTHOSH", "GOWRU"],
-  subtitle: "DATA ENGINEER — BUILDING DATA UNIVERSES",
+  titleLines: ["SANTHOSH", "SHETTY"],
+  subtitle: "SENIOR DATA ENGINEER — ARCHITECTING ENTERPRISE DATA ECOSYSTEMS",
 }
 
 export const manifestoConfig: ManifestoConfig = {
-  headingText: "Engineering Data Gravity",
-  bodyText: "I architect data systems that process millions of records daily — from ETL pipelines in Apache Spark to real-time streams in Kafka. With 4+ years building scalable data infrastructure across AWS and Azure, I transform raw data into strategic intelligence. Every dataset has a story; I build the pipelines that tell it.",
+  headingText: "Engineering Data at Scale",
+  bodyText: "5+ years building and maintaining enterprise data pipelines across healthcare (Elevance Health) and technology (Hexaware, Intex) sectors on Microsoft Azure and Microsoft Fabric. From raw ingestion to BI-ready data — ADF, Databricks, PySpark, Delta Lake, dbt, and Snowflake. I build real-time streaming pipelines with Kafka and Azure Event Hubs, cutting data latency from hours to minutes. Every pipeline I build powers better decisions.",
   videoPath: "/videos/about-video.mp4",
 }
 
@@ -101,72 +102,72 @@ export const exhibitionsConfig: ExhibitionsConfig = {
   detailBackText: "Back to Trajectory",
   items: [
     {
-      slug: "berkshire-hathaway",
-      title: "Berkshire Hathaway",
+      slug: "elevance-health",
+      title: "Elevance Health",
       image: "/images/hero-hover-1.jpg",
       year: "2024–Present",
-      eyebrow: "Data Engineer",
-      intro: "Designed and implemented robust ETL pipelines processing 500k records daily, leveraging Apache Spark, Kafka, Snowflake, and dbt to drive enterprise-wide data transformation.",
+      eyebrow: "Senior Data Engineer",
+      intro: "Built ADF and Microsoft Fabric Lakehouse pipelines ingesting 500K+ daily records, designed Medallion Architecture on ADLS Gen2, and led Snowflake migration reducing storage costs by 40%.",
       sections: [
         {
-          heading: "ETL Pipeline Architecture",
-          body: "Designed and implemented robust ETL pipelines to process 500,000 records daily, improving data availability and accuracy across business units. This led to more efficient decision-making processes and faster reporting cycles. The pipelines handled diverse data sources including transactional databases, API endpoints, and flat files, orchestrating complex transformations while maintaining data integrity and audit trails.",
+          heading: "ADF & Microsoft Fabric Pipelines",
+          body: "Built ADF and Microsoft Fabric Lakehouse pipelines ingesting 500K+ daily records, improving data availability by 45%. Used Microsoft Fabric Dataflows Gen2 to cut transformation time and deliver self-service analytics to 150+ business users via Power BI dashboards. The pipeline architecture ensures governed, reliable data access for both BI and ML workloads across the enterprise.",
         },
         {
-          heading: "Spark Performance Optimization",
-          body: "Leveraged Apache Spark for distributed data processing, optimizing the performance of batch jobs by reducing execution time by 30%. Implemented advanced partitioning strategies, broadcast joins for small lookup tables, and tuned executor memory allocation. These optimizations ensured faster and more reliable data delivery for critical business reporting.",
+          heading: "Medallion Architecture & Azure Synapse",
+          body: "Designed Medallion Architecture (Bronze/Silver/Gold) on ADLS Gen2 and Azure Synapse, enabling governed data access for BI and ML workloads. This layered approach ensures raw data is progressively refined, validated, and enriched — providing business teams with trustworthy, analytics-ready datasets while maintaining full data lineage and audit trails.",
         },
         {
-          heading: "Real-Time Data Ingestion",
-          body: "Implemented and maintained real-time data ingestion pipelines using Apache Kafka, significantly reducing data latency from hours to seconds. This enhanced the responsiveness of real-time analytics applications, enabling business stakeholders to make decisions based on the most current data available. Built Kafka Connect integrations with multiple source systems.",
+          heading: "Real-Time Streaming with Kafka & Event Hubs",
+          body: "Built real-time ingestion pipelines using Kafka and Azure Event Hubs, cutting data latency from hours to minutes. Optimized PySpark batch jobs on Azure Databricks with Delta Lake, reducing execution time by 30% and meeting SLA requirements. These streaming capabilities enabled live analytics and reporting for critical healthcare operations.",
         },
         {
           heading: "Snowflake Migration & dbt Automation",
-          body: "Utilized Snowflake for scalable cloud data warehousing, migrating critical datasets from legacy systems and achieving a 40% reduction in storage costs while increasing query performance. Automated data transformation processes using dbt (Data Build Tool), eliminating manual reporting tasks and achieving a 95% automation rate in recurring data transformations.",
+          body: "Led Snowflake migration from on-premise systems, reducing storage costs by 40% through clustering keys and materialized views. Automated transformation workflows with dbt — modular models, unit tests, documentation — achieving 95% automation of recurring tasks. Implemented GDPR and CCPA data governance: PII masking, RBAC, and audit logging across all Azure data assets.",
         },
       ],
     },
     {
-      slug: "draxo-infotech",
-      title: "Draxo Infotech",
+      slug: "hexaware-technologies",
+      title: "Hexaware Technologies",
       image: "/images/hero-hover-2.jpg",
       year: "2022–2023",
       eyebrow: "Data Engineer",
-      intro: "Engineered automated data pipelines in AWS Glue handling 10TB monthly, led Snowflake migration with star schema design, and established CI/CD pipelines using Terraform and Docker.",
+      intro: "Designed ADF pipelines processing 10+ TB monthly, built PySpark pipelines on Azure Databricks for feature engineering, and led Oracle/SQL Server to Snowflake migration.",
       sections: [
         {
-          heading: "AWS Glue Pipeline Engineering",
-          body: "Engineered and maintained automated data pipelines in AWS Glue, successfully handling over 10 TB of data monthly. Implemented efficient ETL jobs using PySpark that processed diverse data formats including JSON, Parquet, and CSV. The pipeline architecture resulted in a 40% improvement in data processing efficiency and reliability, with automated error handling and retry mechanisms.",
+          heading: "ADF Pipeline Engineering & Azure Databricks",
+          body: "Designed and maintained ADF pipelines processing 10+ TB monthly, improving efficiency by 40% through error handling, retry logic, and alerting. Built PySpark pipelines on Azure Databricks for feature engineering, supporting ML model training on Azure Machine Learning. These pipelines handled diverse data formats and complex transformations with enterprise-grade reliability.",
         },
         {
-          heading: "Snowflake Migration & Data Modeling",
-          body: "Led the migration from on-premise systems to Snowflake, optimizing data storage, performance, and cost-efficiency by reducing storage overheads by 15%. Designed and implemented star schema data models in Snowflake, enabling faster and more efficient query execution and improving report generation times by 35%, allowing the team to generate insights more quickly.",
+          heading: "Hybrid Cloud & Snowflake Migration",
+          body: "Contributed to AWS Glue ETL jobs and S3 data lake ingestion in a hybrid Azure/AWS environment. Led Oracle and SQL Server to Snowflake migration, reducing storage overhead by 15%. Set up CI/CD pipelines with Terraform and Docker on Azure DevOps, cutting deployment errors by 70% and enabling reproducible, auditable infrastructure deployments.",
         },
         {
-          heading: "SQL Optimization & CI/CD",
-          body: "Streamlined data workflows by optimizing complex SQL queries, cutting processing time by 50% through strategic indexing, query rewriting, and materialized views. Established CI/CD pipelines using Terraform and Docker for seamless deployment and management of data engineering environments, reducing manual errors by 70% and increasing deployment efficiency across the team.",
+          heading: "Workflow Orchestration & Data Quality",
+          body: "Configured Apache Airflow DAGs for multi-step workflow orchestration with SLA monitoring and failure alerting. Enforced data quality using Great Expectations, maintaining 99%+ accuracy across all production datasets. Built comprehensive monitoring dashboards to track pipeline health, data freshness, and processing throughput in real time.",
         },
       ],
     },
     {
-      slug: "bright-mind-technologies",
-      title: "Bright Mind Technologies",
+      slug: "intex-technologies",
+      title: "Intex Technologies",
       image: "/images/hero-hover-3.jpg",
       year: "2020–2021",
       eyebrow: "Data Analyst",
-      intro: "Conducted in-depth business data analysis using SQL and Excel, developed automated Tableau dashboards, and delivered data-driven recommendations that saved $200K annually.",
+      intro: "Analyzed customer behavior using SQL and Python, built automated Power BI dashboards for C-level stakeholders, and developed a churn prediction model achieving 82% accuracy.",
       sections: [
         {
-          heading: "Business Intelligence & Analysis",
-          body: "Conducted in-depth analysis of business data using SQL and Excel, uncovering key trends that led to a 10% improvement in customer retention. Developed and automated dashboard reports using Tableau, reducing report generation time from 3 hours to 30 minutes, saving significant time for the analytics team and providing real-time insights to stakeholders.",
+          heading: "Customer Analytics & Power BI",
+          body: "Analyzed customer behavior using SQL and Python (Pandas, NumPy, Matplotlib), driving a 10% improvement in retention rates. Built and automated Power BI dashboards, cutting report generation from 3 hours to 30 minutes for C-level stakeholders. These insights provided leadership with actionable, real-time visibility into customer trends and business performance.",
         },
         {
-          heading: "A/B Testing & Database Optimization",
-          body: "Managed and analyzed the results of A/B testing for various marketing campaigns, improving conversion rates by 20% and contributing to a more targeted and effective marketing strategy. Optimized PostgreSQL database performance, reducing query processing times by 25% through index optimization and query refactoring, ensuring smoother and faster access to business-critical data.",
+          heading: "Machine Learning & A/B Testing",
+          body: "Built a customer churn prediction model using scikit-learn (logistic regression, random forest), achieving 82% accuracy. Ran A/B testing for marketing campaigns using t-tests and chi-square analysis, improving conversion rates by 20%. These data science initiatives contributed directly to more targeted marketing strategies and higher customer lifetime value.",
         },
         {
-          heading: "Strategic Impact",
-          body: "Delivered data-driven recommendations to management based on detailed analysis, leading to process optimizations that saved the company approximately $200K annually. Identified inefficiencies in resource allocation and supply chain operations through comprehensive data modeling and statistical analysis, directly contributing to the organization's bottom line.",
+          heading: "Database Optimization & Cost Savings",
+          body: "Optimized PostgreSQL schemas and indexing, reducing query execution time by 25%. Identified process inefficiencies through data analysis, delivering approximately $200K in annual savings. The combination of technical optimization and business-focused analytics established a culture of data-driven decision-making across the organization.",
         },
       ],
     },
@@ -188,11 +189,11 @@ export const footerConfig: FooterConfig = {
   visitLines: ["San Antonio, Texas", "Open to Remote & Relocation"],
   connectLabel: "Connect",
   connectLinks: [
-    { label: "santhoshgowru8@gmail.com", href: "mailto:santhoshgowru8@gmail.com" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/santhoshgowru/" },
-    { label: "+1 (210)-951-0208", href: "tel:+12109510208" },
+    { label: "santhoshshettyde@gmail.com", href: "mailto:santhoshshettyde@gmail.com" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/santhoshshetty" },
+    { label: "+1 (726)-256-2641", href: "tel:+17262562641" },
   ],
   brandName: "SANTHOSH",
-  rightsText: "© 2025 Santhosh Gowru. All rights reserved.",
+  rightsText: "© 2025 Santhosh Shetty. All rights reserved.",
   coordinatesText: "29.4241° N, 98.4936° W",
 }

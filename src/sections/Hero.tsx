@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { heroConfig, navigationConfig } from '../config';
 
 const FLOATING_SKILLS = [
-  'Python', 'Spark', 'Kafka', 'AWS', 'SQL', 'Snowflake', 'Azure', 'dbt'
+  'Azure', 'Databricks', 'Kafka', 'Fabric', 'PySpark', 'Snowflake', 'ADF', 'dbt'
 ];
 
 export default function Hero() {
